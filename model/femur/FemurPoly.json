@@ -1,0 +1,476 @@
+{
+    "animations": {},
+    "asset": {
+        "generator": "collada2gltf@cadab1ae180241a1d97279f3be8f9942ead79acc"
+    },
+    "attributes": {
+        "attribute_18": {
+            "bufferView": "bufferView_22",
+            "byteOffset": 0,
+            "byteStride": 12,
+            "count": 3134,
+            "max": [
+                52.9995,
+                89.3343,
+                43.5289
+            ],
+            "min": [
+                -34.9964,
+                7.63806,
+                -25.5576
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_20": {
+            "bufferView": "bufferView_22",
+            "byteOffset": 37608,
+            "byteStride": 12,
+            "count": 3134,
+            "max": [
+                0.999841,
+                0.999888,
+                0.999216
+            ],
+            "min": [
+                -0.999992,
+                -0.999567,
+                -0.999889
+            ],
+            "type": "FLOAT_VEC3"
+        }
+    },
+    "bufferViews": {
+        "bufferView_22": {
+            "buffer": "FemurPoly.bin",
+            "byteLength": 75216,
+            "byteOffset": 0,
+            "target": "ARRAY_BUFFER"
+        },
+        "bufferView_23": {
+            "buffer": "FemurPoly.bin",
+            "byteLength": 36180,
+            "byteOffset": 75216,
+            "target": "ELEMENT_ARRAY_BUFFER"
+        }
+    },
+    "buffers": {
+        "FemurPoly.bin": {
+            "byteLength": 111396,
+            "path": "FemurPoly.bin"
+        }
+    },
+    "cameras": {
+        "camera_0": {
+            "projection": "perspective",
+            "xfov": 28.0725,
+            "yfov": 28.0725,
+            "zfar": 1e+06,
+            "znear": 0.05
+        }
+    },
+    "indices": {
+        "indices_16": {
+            "bufferView": "bufferView_23",
+            "byteOffset": 0,
+            "count": 18090,
+            "type": "UNSIGNED_SHORT"
+        }
+    },
+    "lights": {
+        "Sunlight__Front-Upper-Left-light": {
+            "directional": {
+                "color": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "id": "Sunlight__Front-Upper-Left-light",
+            "type": "directional"
+        },
+        "Sunlight__Front-Upper-Right-light": {
+            "directional": {
+                "color": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "id": "Sunlight__Front-Upper-Right-light",
+            "type": "directional"
+        },
+        "defaultambient-light": {
+            "ambient": {
+                "color": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "id": "defaultambient-light",
+            "type": "ambient"
+        }
+    },
+    "materials": {
+        "material.0": {
+            "instanceTechnique": {
+                "technique": "technique1",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": [
+                            0.3,
+                            0.3,
+                            0.3,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": [
+                            0.4,
+                            0.4,
+                            0.4,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "emission",
+                        "value": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "reflective",
+                        "value": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 16
+                    },
+                    {
+                        "parameter": "specular",
+                        "value": [
+                            0.7,
+                            0.7,
+                            0.7,
+                            1
+                        ]
+                    }
+                ]
+            },
+            "name": "default_1"
+        }
+    },
+    "meshes": {
+        "stl_object-mesh": {
+            "name": "stl_object_1",
+            "primitives": [
+                {
+                    "indices": "indices_16",
+                    "material": "material.0",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_20",
+                        "POSITION": "attribute_18"
+                    }
+                }
+            ]
+        }
+    },
+    "nodes": {
+        "Sunlight__Front-Upper-Left-node": {
+            "children": [],
+            "lights": [
+                "Sunlight__Front-Upper-Left-light"
+            ],
+            "matrix": [
+                0.816496,
+                0.408248,
+                0.408248,
+                0,
+                5.09173e-10,
+                0.707107,
+                -0.707107,
+                0,
+                -0.57735,
+                0.57735,
+                0.57735,
+                0,
+                -1,
+                1,
+                1,
+                1
+            ],
+            "name": "Sunlight__Front-Upper-Left"
+        },
+        "Sunlight__Front-Upper-Right-node": {
+            "children": [],
+            "lights": [
+                "Sunlight__Front-Upper-Right-light"
+            ],
+            "matrix": [
+                0.816496,
+                -0.408248,
+                -0.408248,
+                0,
+                -5.09173e-10,
+                0.707107,
+                -0.707107,
+                0,
+                0.57735,
+                0.57735,
+                0.57735,
+                0,
+                1,
+                1,
+                1,
+                1
+            ],
+            "name": "Sunlight__Front-Upper-Right"
+        },
+        "default-node": {
+            "camera": "camera_0",
+            "children": [],
+            "matrix": [
+                0.598286,
+                -0.0318314,
+                -0.80065,
+                0,
+                -0.265361,
+                0.934955,
+                -0.235462,
+                0,
+                0.756067,
+                0.353335,
+                0.550924,
+                0,
+                162.215,
+                120.088,
+                120.628,
+                1
+            ],
+            "name": "default_3"
+        },
+        "defaultambient-node": {
+            "children": [],
+            "lights": [
+                "defaultambient-light"
+            ],
+            "matrix": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+            ],
+            "name": "defaultambient"
+        },
+        "femur-node": {
+            "children": [
+                "stl_object-node"
+            ],
+            "matrix": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+            ],
+            "name": "femur"
+        },
+        "stl_object-node": {
+            "children": [],
+            "matrix": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+            ],
+            "meshes": [
+                "stl_object-mesh"
+            ],
+            "name": "stl_object"
+        }
+    },
+    "profile": "WebGL 1.0",
+    "programs": {
+        "program_0": {
+            "fragmentShader": "FemurPoly0FS",
+            "vertexShader": "FemurPoly0VS"
+        }
+    },
+    "scene": "defaultScene",
+    "scenes": {
+        "defaultScene": {
+            "nodes": [
+                "default-node",
+                "Sunlight__Front-Upper-Left-node",
+                "Sunlight__Front-Upper-Right-node",
+                "defaultambient-node",
+                "femur-node"
+            ]
+        }
+    },
+    "shaders": {
+        "FemurPoly0FS": {
+            "path": "FemurPoly0FS.glsl"
+        },
+        "FemurPoly0VS": {
+            "path": "FemurPoly0VS.glsl"
+        }
+    },
+    "skins": {},
+    "techniques": {
+        "technique1": {
+            "parameters": {
+                "ambient": {
+                    "type": "FLOAT_VEC4"
+                },
+                "diffuse": {
+                    "type": "FLOAT_VEC4"
+                },
+                "emission": {
+                    "type": "FLOAT_VEC4"
+                },
+                "light0Color": {
+                    "type": "FLOAT_VEC3",
+                    "value": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "light0Transform": {
+                    "source": "Sunlight__Front-Upper-Left-node",
+                    "type": "FLOAT_MAT4"
+                },
+                "light1Color": {
+                    "type": "FLOAT_VEC3",
+                    "value": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "light1Transform": {
+                    "source": "Sunlight__Front-Upper-Right-node",
+                    "type": "FLOAT_MAT4"
+                },
+                "light2Color": {
+                    "type": "FLOAT_VEC3",
+                    "value": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "normal": {
+                    "semantic": "NORMAL",
+                    "type": "FLOAT_VEC3"
+                },
+                "normalMatrix": {
+                    "semantic": "WORLDVIEWINVERSETRANSPOSE",
+                    "type": "FLOAT_MAT3"
+                },
+                "position": {
+                    "semantic": "POSITION",
+                    "type": "FLOAT_VEC3"
+                },
+                "projectionMatrix": {
+                    "semantic": "PROJECTION",
+                    "type": "FLOAT_MAT4"
+                },
+                "reflective": {
+                    "type": "FLOAT_VEC4"
+                },
+                "shininess": {
+                    "type": "FLOAT"
+                },
+                "specular": {
+                    "type": "FLOAT_VEC4"
+                },
+                "worldViewMatrix": {
+                    "semantic": "WORLDVIEW",
+                    "type": "FLOAT_MAT4"
+                }
+            },
+            "pass": "defaultPass",
+            "passes": {
+                "defaultPass": {
+                    "instanceProgram": {
+                        "attributes": {
+                            "a_normal": "normal",
+                            "a_position": "position"
+                        },
+                        "program": "program_0",
+                        "uniforms": {
+                            "u_ambient": "ambient",
+                            "u_diffuse": "diffuse",
+                            "u_emission": "emission",
+                            "u_light0Color": "light0Color",
+                            "u_light0Transform": "light0Transform",
+                            "u_light1Color": "light1Color",
+                            "u_light1Transform": "light1Transform",
+                            "u_light2Color": "light2Color",
+                            "u_normalMatrix": "normalMatrix",
+                            "u_projectionMatrix": "projectionMatrix",
+                            "u_reflective": "reflective",
+                            "u_shininess": "shininess",
+                            "u_specular": "specular",
+                            "u_worldViewMatrix": "worldViewMatrix"
+                        }
+                    },
+                    "states": {
+                        "blendEnable": false,
+                        "cullFaceEnable": true,
+                        "depthMask": true,
+                        "depthTestEnable": true
+                    }
+                }
+            }
+        }
+    }
+}

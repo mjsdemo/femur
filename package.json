@@ -1,0 +1,14 @@
+{
+    "name":"glTF-webgl-viewer",
+    "version":"0.1.0",
+    "dependencies": {
+        "montage": "0.13.1",
+        "matte": "0.1.1",
+        "q" : "0.9.6",
+        "digit": "0.3.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/fabrobinet/glTF-webgl-viewer.git"
+    }
+}
