@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<!-- <copyright>
+Copyright (c) 2012, Motorola Mobility LLC.
+All Rights Reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice,
+  this list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+
+* Neither the name of Motorola Mobility LLC nor the names of its
+  contributors may be used to endorse or promote products derived from this
+  software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+</copyright> -->
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="options.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "ui/options.reel",
+            "properties": {
+                "element": {"#": "options"}
+            }
+        },
+        "number": {
+            "prototype": "digit/ui/number-field.reel",
+            "properties": {
+                "element": {"#": "number"}
+            },
+            "bindings": {
+                "value": {"<->": "@owner.bytesLimit"}
+            }
+        },
+        "progress": {
+            "prototype": "matte/ui/progress.reel",
+            "properties": {
+                "element": {"#": "progress"},
+                "max": 100
+            },
+            "bindings": {
+                "value": {"<-": "@owner.loadingProgress"},
+                "classList.has('shown')": {"<-": "@owner.loadingProgress > 0"}
+            }
+        },
+        "range": {
+            "prototype": "digit/ui/slider.reel",
+            "properties": {
+                "element": {"#": "range"},
+                "max": 1000,
+                "min": 1,
+                "step": 1
+            },
+            "bindings": {
+                "value": {"<->": "@owner.bytesLimit"}
+            }
+        },
+        "requests": {
+            "prototype": "digit/ui/number-field.reel",
+            "properties": {
+                "element": {"#": "requests"},
+                "max": 6,
+                "min": 1,
+                "step": 1
+            },
+            "bindings": {
+                "value": {"<->": "@owner.concurrentRequests"}
+            }
+        },
+        "restart": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "restart"}
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+        "selectCamera": {
+            "prototype": "digit/ui/select.reel",
+            "properties": {
+                "element": {"#": "selectCamera"},
+                "labelPropertyName": "name"
+            },
+            "bindings": {
+                "contentController": {"<-": "@owner.camerasController"}
+            }
+        },
+        "selectModel": {
+            "prototype": "digit/ui/select.reel",
+            "properties": {
+                "element": {"#": "selectModel"},
+                "labelPropertyName": "name",
+                "multiSelect": false
+            },
+            "bindings": {
+                "contentController": {"<-": "@owner.modelsController"}
+            }
+        },
+        "showBBOX": {
+            "prototype": "digit/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "showBBOX"}
+            },
+            "bindings": {
+                "checked": {"<->": "@owner.showBBOX"}
+            }
+        },
+        "showReflection": {
+            "prototype": "digit/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "showReflection"}
+            },
+            "bindings": {
+                "checked": {"<->": "@owner.showReflection"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="options" class="options">
+        <h1 class="title">
+            GLTF Viewer
+        </h1>
+        <section class="optionsGroup">
+            <h3></h3>
+            <div type="progress" data-montage-id="progress" class="progress"></div>
+        </section>
+        <section class="optionsGroup speed">
+            <h3>
+                Progressive Loading
+            </h3>
+            <input type="range" data-montage-id="range" class="range">
+            <input type="number" data-montage-id="number">
+            <label>
+                kb
+            </label>
+            <h3>
+                Concurrent Requests
+            </h3>
+            <input type="number" data-montage-id="requests">
+            <h3></h3>
+            <div>
+                <button data-montage-id="restart" class="button">Reload</button>
+            </div>
+         </section>
+        <section class="optionsGroup">
+            <h3>
+                Rendering options
+            </h3>
+            <label>
+                <input type="checkbox" data-montage-id="showReflection" class="checkbox">
+                Reflection
+            </label>
+            <label>
+                <input type="checkbox" data-montage-id="showBBOX" class="checkbox">
+                Bounding Box
+            </label>
+        </section>
+        <section class="optionsGroup">
+            <h3>
+                Model
+            </h3>
+            <select type="select" data-montage-id="selectModel">
+
+            </select>
+        </section>
+        <section class="optionsGroup">
+            <h3>
+                Camera
+            </h3>
+            <select type="select" data-montage-id="selectCamera">
+
+            </select>
+        </section>
+        <section class="optionsGroup">
+            <div class="branding"></div>
+        </section>
+    </div>
+</body>
+</html>
